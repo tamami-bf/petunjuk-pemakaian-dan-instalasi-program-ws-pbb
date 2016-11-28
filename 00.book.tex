@@ -90,6 +90,30 @@ Instalasi program aplikasi \textit{web services} ini cukup mudah, karena hasil d
 
 \section{PETUNJUK PEMAKAIAN}
 
+Seperti terlihat pada halaman awal dari layanan \textit{web services}. Tiga layanan yang ditawarkan, yaitu \textit{inquiry} data, pencatatan pembayaran, dan \textit{reversal} pembayaran dapat dilakukan dengan perintah melalui URL \textit{web}.
 
+Untuk mempermudah pemahaman, karena bentuknya hanya berupa \textit{web service} maka hanya akan 2 (dua) informasi yang dibutuhkan, yaitu berupa \textit{request} dan respon atau dalam kata lain \textit{input} dan \textit{output}. Berikut penjelasan lengkapnya :
+
+\subsection{INPUT}
+
+\textit{Request} yang pertama adalah untuk \textit{inquiry} data tagihan, format dari \textit{inquiry} data ini adalah sebagai berikut :
+
+\begin{lstlisting}
+/sppt/{nop}/{thn}
+\end{lstlisting}
+
+Dimana \texttt{nop} nantinya diganti dengan Nomor Objek Pajak (NOP) yang diinginkan dan \texttt{thn} digantikan dengan tahun pajak yang diinginkan.
+
+Untuk perintah yang kedua adalah \textit{request} untuk pencatatan pembayaran, perintahnya adalah sebagai berikut :
+
+\begin{lstlisting}
+/bayar/{nop}/{thn}/{tglBayar}/{jamBayar}
+\end{lstlisting}
+
+Untuk \texttt{nop} nantinya digantikan dengan Nomor Objek Pajak yang diinginkan, untuk \texttt{thn} digantikan dengan tahun pajak yang akan dibayarkan, untuk \texttt{tglBayar} digantikan dengan tanggal terjadinya pembayaran, dan untuk \texttt{jamBayar} digantikan dengan jam saat terjadinya pembayaran.
+
+Untuk perintah yang ketiga adalah \textit{request reversal} pembayaran bila terjadi kesalahan pembayaran.
+
+\subsection{OUTPUT}
 
 \end{document}
